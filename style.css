@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    overflow: hidden; 
+    background-color: #78c6ff; 
+}
+
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%; 
+    background-color: #78c6ff; 
+}
+
+.road {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; 
+    background-color: #777;
+    border-top: 2px dashed #aaa; 
+}
+
+.avto {
+    position: absolute;
+    bottom: 15%;
+    left: -250px; 
+    width: 200px;
+    height: 100px;
+    animation: dvijenie 5s linear forwards; 
+}
+
+
+.svet_avto {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 160px;
+    height: 60px;
+    background-color: #f00; 
+    border-radius: 10px;
+}
+.wheel {
+    position: absolute;
+    bottom: -10px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    animation: rotate-wheel 0.5s linear infinite; /*анимация есть просто я не покрасил колесо  */
+}
+
+.wheel-left {
+    left: 10px;
+}
+
+.wheel-right {
+    right: 10px;
+}
+.light {
+    position: absolute;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: blink 1s linear infinite alternate;
+    opacity: 0;
+}
+
+.light-left {
+    left: 10px;
+}
+
+.light-right {
+    right: 10px;
+}
+
+@keyframes dvijenie {
+    to {
+        left: calc(100% - 250px); 
+    }
+}
+@keyframes vrashenie {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blink {
+    to {
+        opacity: 1;
+    }
+}
+.aboba {
+    margin-top: -150px;
+    color: #78c6ff ;
+}
